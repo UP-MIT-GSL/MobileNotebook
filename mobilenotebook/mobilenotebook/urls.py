@@ -9,7 +9,7 @@ urlpatterns = patterns('',
     # url(r'^$', 'mobilenotebook.views.home', name='home'),
     # url(r'^mobilenotebook/', include('mobilenotebook.foo.urls')),
     
-    url(r'^about$', 'info.views.about'),
+    url(r'^$', 'info.views.about'),
     
     # Uncomment the admin/doc line below to enable admin documentation:
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
