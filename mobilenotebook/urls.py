@@ -6,8 +6,6 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     # Examples:
-    # url(r'^$', 'mobilenotebook.views.home', name='home'),
-    # url(r'^mobilenotebook/', include('mobilenotebook.foo.urls')),
     url(r'^$', 'webaccess.views.home'),
     url(r'^about$', 'webaccess.views.about'),
     

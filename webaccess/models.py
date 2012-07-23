@@ -40,15 +40,15 @@ class Enroll(models.Model):
     def __unicode__(self):
         return self.user.firstname + " is enrolled to " + self.coursenumber.name
 
-class Notes(models.Model):
+class Note(models.Model):
     title = models.CharField(max_length=50)
     link = models.CharField(max_length=100)
     def __unicode__(self):
         return self.title
 
-class WriteNotes(models.Model):
+class WriteNote(models.Model):
     user = models.ForeignKey(User)
-    notes = models.ForeignKey(Notes)
+    notes = models.ForeignKey(Note)
     date_written = models.DateField()
 
     def __unicode__(self):
@@ -70,15 +70,3 @@ class Membership(models.Model):
 class Member(models.Model):
     user = models.ForeignKey(User)
     coursenumber = models.ForeignKey(CourseNumber)  
-
-
-admin.site.register(School)
-admin.site.register(Professor)
-admin.site.register(User)
-admin.site.register(Notes)
-admin.site.register(Group)
-admin.site.register(Member)
-admin.site.register(CourseNumber)
-admin.site.register(Enroll)
-admin.site.register(Membership)
-admin.site.register(WriteNotes)
