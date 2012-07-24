@@ -54,14 +54,9 @@ class WriteNote(models.Model):
     def __unicode__(self):
         return self.user.firstname + " wrote " + self.notes.title
 
-class Group(models.Model):
-    name = models.CharField(max_length=50)
-    def __unicode__(self):
-        return self.name
-
 class Membership(models.Model):
     user = models.ForeignKey(User)
-    group = models.ForeignKey(Group)
+    coursenumber = models.ForeignKey(CourseNumber)
     date_joined = models.DateField()
 
     def __unicode__(self):
