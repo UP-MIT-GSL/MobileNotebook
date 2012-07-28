@@ -1,5 +1,5 @@
 from django.db import models
-from django.contrib.auth.models import User, UserManager
+from django.contrib.auth.models import User, UserManager, Group
 from django.contrib import admin
 
 class School(models.Model):
@@ -13,8 +13,7 @@ class Professor(models.Model):
     def __unicode__(self):
         return self.firstname + " " + self.lastname
 
-class CourseNumber(models.Model):
-    name = models.CharField(max_length=10)
+class Class(Group):
     schedule = models.CharField(max_length=20)
     professor = models.ForeignKey(Professor)
     def __unicode__(self):
@@ -22,7 +21,7 @@ class CourseNumber(models.Model):
 
 class CustomUser(User):
     school = models.ForeignKey(School)
-    coursenumbers = models.ManyToManyField(CourseNumber, through='Enroll')
+    coursenumbers = models.ManyToManyField(Class, through='Enroll')
     objects = UserManager()
 
     def __unicode__(self):
@@ -30,7 +29,7 @@ class CustomUser(User):
 
 class Enroll(models.Model):
     user = models.ForeignKey(CustomUser)
-    coursenumber = models.ForeignKey(CourseNumber)
+    coursenumber = models.ForeignKey(Class)
     date_joined = models.DateField()
 
     def __unicode__(self):
