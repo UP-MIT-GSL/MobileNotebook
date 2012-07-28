@@ -6,7 +6,7 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     # Examples:
-    url(r'^$', 'webaccess.views.home'),
+    url(r'^$', 'webaccess.views.login_user'),
     url(r'^about$', 'webaccess.views.about'),
     
     # Uncomment the admin/doc line below to enable admin documentation:

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<title>Mobile Notebook</title>
+	<head><link rel="stylesheet" href="styles.css" type="text/css" /></head>
+	<body>
+		<form action="" method="post">
+		{% block content %}
+		{% if form.errors %}
+			<p>Your username and password didn't match. Please try again.</p>
+		{% endif %}
+		<table width="100%">
+			<tr>
+			<td>
+				<a href="http://tinypic.com?ref=10oect2" target="_blank"><img height="100px" width="350px" src="http://i49.tinypic.com/10oect2.png" border="0" alt="Image and video hosting by TinyPic" class="center"></a>
+			</td>
+			<td align="right">
+				<table >
+				<tr>
+					<td> Username: </td>
+					<td> Password: </td><td></td><td width="20px"></td>
+				</tr>
+				<tr>
+					<td>
+    					{% csrf_token %}
+    					<br /><input type="text" name="username" value="{{ username }}" />
+					</td>
+					<td>
+					    {% csrf_token %}
+						<br /><input type="password" name="password" value=""/>
+					</td>
+					<td>
+						<input type="submit" value="Log In">
+					</td><td></td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+		</table>
+{% endblock %}
+</form>
+</body>
+</html> 
