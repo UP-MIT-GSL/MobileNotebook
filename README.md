@@ -3,9 +3,9 @@
 
 ## The Team: ##
 + Cassandra Leigh Wang -- cassie.leigh.wang@gmail.com
-+ Ricardo C. Bautista Jr. -- 
++ Ricardo C. Bautista Jr. -- riclikenoother@gmail.com
 + Victoria Cassandra R. Real -- cassey_real@yahoo.com
-+ Adrian Orense --
++ Adrian Orense -- acorense@gmail.com
 
 ### Links: ###
 * Github URL: https://github.com/AITI-Philippines/MobileNotebook.git
