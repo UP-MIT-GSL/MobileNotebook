@@ -27,11 +27,11 @@ class CustomUser(User):
 
     def __unicode__(self):
         return self.first_name + " " + self.last_name
-def create_customuser(sender,instance,created, **kwargs):
-    if created:
-        profile, created = CustomUser.objects.get_or_create(user=instance)
 
-post_save.connect(create_customuser, sender=User)
+    def create_customuser(sender,instance,created, **kwargs):
+        if created:
+            profile, created = CustomUser.objects.get_or_create(user=instance)
+        post_save.connect(create_customuser, sender=User)
 
 class Enroll(models.Model):
     user = models.ForeignKey(CustomUser)
