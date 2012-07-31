@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User, UserManager, Group
 from django.contrib import admin
+from django.db.models.signals import post_save
 
 class School(models.Model):
     name = models.CharField(max_length=50)
@@ -26,6 +27,11 @@ class CustomUser(User):
 
     def __unicode__(self):
         return self.first_name + " " + self.last_name
+
+    def create_customuser(sender,instance,created, **kwargs):
+        if created:
+            profile, created = CustomUser.objects.get_or_create(user=instance)
+        post_save.connect(create_customuser, sender=User)
 
 class Enroll(models.Model):
     user = models.ForeignKey(CustomUser)

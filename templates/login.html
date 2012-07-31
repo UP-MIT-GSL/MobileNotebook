@@ -5,7 +5,7 @@
 <body>
 	<form action="" method="post">
 		<table width="100%">
-			<tr>
+			<tr valign="middle">
 			<td>
 				<a href="http://tinypic.com?ref=10oect2" target="_blank"><img height="100px" width="350px" src="http://i49.tinypic.com/10oect2.png" border="0" alt="Image and video hosting by TinyPic" class="center"></a>
 			</td>
@@ -18,22 +18,111 @@
 				</tr>
 				<tr>
 					<td> Username: </td>
-					<td> Password: </td><td></td><td width="20px"></td>
+					<td> Password: </td>
+					<td></td>
+					<td width="20px"></td>
 				</tr>
-				<tr>
+				<tr valign="top">
 					<td>
     					{% csrf_token %}
-    					<br /><input type="text" name="username" value="{{ username }}" />
+    					<input type="text" name="username" value="{{ username }}" />
 					</td>
 					<td>
 					    {% csrf_token %}
-						<br /><input type="password" name="password" value=""/>
+						<input type="password" name="password" value=""/>
 					</td>
 					<td>
-						<input type="submit" value="Log In">
-					</td><td></td>
+						<input type="submit" name="login" value="Log In">
+					</td>
+					<td></td>
 				</tr>
 				</table>
+			</td>
+			</tr>
+			<tr>
+			<td></td>
+			<td>
+			<table width="100%">
+				<tr colspan="2">
+					<td>
+					Sign Up <hr>
+					</td>					
+				</tr>
+				<tr>
+					<td>
+					First Name:
+					</td>
+					<td>
+					<input type="text" name="firstname" />
+					</td>
+				</tr>
+				<tr>
+					<td>
+					Last Name:
+					</td>
+					<td>
+					<input type="text" name="lastname" />
+					</td>
+				</tr>
+				<tr>
+					<td>
+					User Name:
+					</td>
+					<td>
+					<input type="text" name="reg_username" />
+					</td>
+				</tr>
+<tr>
+					<td>
+					Your Email:
+					</td>
+					<td>
+					<input type="text" name="email" />
+					</td>
+				</tr>
+				<tr>
+					<td>
+					Password:
+					</td>
+					<td>
+					<input type="password" name="reg_password" />
+					</td>
+				</tr>
+				<tr>
+					<td>
+					Re-Type Password:
+					</td>
+					<td>
+					<input type="password" name="password2" />
+					</td>
+				</tr>
+				<tr>
+					<td>
+					School:
+					</td>
+					<td>
+						<select>
+							<option value="UP Diliman">UP Diliman</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					&nbsp;
+					</td>
+					<td>
+					&nbsp;
+					</td>					
+				</tr>
+				<tr>
+					<td>
+					&nbsp;
+					</td>
+					<td>
+					<input type="submit" name="register" value="Sign Up" />
+					</td>					
+				</tr>
+			</table>
 			</td>
 			</tr>
 		</table>

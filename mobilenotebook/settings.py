@@ -21,6 +21,12 @@ DATABASES = {
         'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
     }
 }
+AUTH_PROFILE_MODULE = 'MobileNotebook.CustomUser'
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'mail.infobuilder.net'
+EMAIL_PORT = 26
+EMAIL_HOST_USER ='acorense@infobuilder.net'
+EMAIL_HOST_PASSWORD = '12345'
 
 #>>>>>DATABASES = {'default': dj_database_url.config(default='postgres://localhost')}
 
