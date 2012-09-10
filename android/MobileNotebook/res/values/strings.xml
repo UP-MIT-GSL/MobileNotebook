@@ -1,0 +1,33 @@
+<resources>
+
+    <string name="app_name">MobileNotebookUI</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="tab1">TAB 1</string>
+    <string name="title_activity_logged__in">Logged_In</string>
+    <string name="title_activity_classes__list">Classes_List</string>
+    <string name="title_activity_list_classes">ListClasses</string>
+    <string name="title_activity_class_list">ClassListActivity</string>
+    <string name="title_activity_class_viewer_fragment">ClassViewerFragment</string>
+    <string name="title_activity_image_pick">ImagePickActivity</string>
+    <string name="title_activity_camera">CameraActivity</string>
+    <string name="title_activity_camera_demo">CameraDemo</string>
+    <string name="title_activity_upload_to_class">UploadToClass</string>
+    <string name="text_capture">Capture</string>
+    <string name="choose_account_prompt">Choose a Google Account</string>
+    <string name="database_name">MobileNotebookDB</string>
+    
+    <string-array name="classes_arrays">
+        <item>CS 172 TTh 4:00-9:00</item>
+        <item>CS 198 WF 8:30-12</item>
+        <item>Math 53 MTWThF 1-2:30</item>
+        <item>PI 100 WF 4:30-6</item>
+        <item>CS 130 TTh 10-11:30</item>
+        <item>CS 131 WF 1-2:30</item>
+        <item>CS 198 M 9-5 </item>
+        <item>CWTS 2 S 1-4</item>
+    </string-array>
+
+    
+</resources>

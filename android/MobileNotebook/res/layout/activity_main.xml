@@ -1,0 +1,81 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/logInButton"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="250dp"
+        android:layout_height="125dp"
+        android:layout_alignParentTop="false"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="90dp"
+        android:src="@drawable/mobilenotebookheader" />
+
+    <EditText
+        android:id="@+id/userName"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_alignRight="@+id/imageView1"
+        android:layout_below="@+id/imageView1"
+        android:layout_marginTop="21dp"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:textSize="10dip" />
+
+    <TextView
+        android:id="@+id/userNameDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/imageView1"
+        android:layout_alignTop="@+id/userName"
+        android:layout_marginLeft="15dp"
+        android:text="Username"
+        android:typeface="normal" />
+
+    <TextView
+        android:id="@+id/passWordView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/userNameDisplay"
+        android:layout_below="@+id/userName"
+        android:layout_marginTop="16dp"
+        android:text="Password" />
+
+    <EditText
+        android:id="@+id/passWord"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_alignLeft="@+id/userName"
+        android:layout_alignTop="@+id/passWordView"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:textSize="10dip" >
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/buttonLogIn"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_alignRight="@+id/passWord"
+        android:layout_below="@+id/passWord"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="26dp"
+        android:background="@drawable/log_in_button" 
+        android:onClick="profilePage"
+        />
+
+    <Button
+        android:id="@+id/signUpButton"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_alignBaseline="@+id/buttonLogIn"
+        android:layout_alignBottom="@+id/buttonLogIn"
+        android:layout_alignLeft="@+id/passWordView"
+        android:background="@drawable/sign_up_button"
+        android:onClick="signUpPage" />
+
+</RelativeLayout>

@@ -1,0 +1,113 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.mobilenotebookui"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="15" />
+
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:debuggable="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/title_activity_main" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".SignUpActivity" />
+        <activity
+            android:name=".Logged_In"
+            android:label="@string/title_activity_logged__in" >
+            <intent-filter>
+                <action android:name="android.intent.action.SIGNUPACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Classes_List"
+            android:label="@string/title_activity_classes__list" >
+            <intent-filter>
+                <action android:name="android.intent.action.CLASSES_LIST" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ListClasses"
+            android:label="@string/title_activity_list_classes" >
+            <intent-filter>
+                <action android:name="android.intent.action.LISTCLASSES" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".NotifListFragment"
+            android:label="@string/title_activity_class_list" >
+            <intent-filter>
+                <action android:name="android.intent.action.NOTIFLISTFRAGMENT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".NotifViewerFragment"
+            android:label="@string/title_activity_class_viewer_fragment" >
+            <intent-filter>
+                <action android:name="android.intent.action.NOTIFVIEWERFRAGMENT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ImagePickActivity"
+            android:label="@string/title_activity_image_pick" >
+            <intent-filter>
+                <action android:name="android.intent.action.IMAGEPICACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".CameraActivity"
+            android:label="@string/title_activity_camera" >
+            <intent-filter>
+                <action android:name="android.intent.action.CAMERAACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".CameraDemo"
+            android:label="@string/title_activity_camera_demo" >
+            <intent-filter>
+                <action android:name="android.intent.action.CAMERADEMO" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".UploadToClass"
+            android:label="@string/title_activity_upload_to_class" >
+            <intent-filter>
+                <action android:name="android.intent.action.UPLOADTOCLASS" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+          </application>
+
+</manifest>
