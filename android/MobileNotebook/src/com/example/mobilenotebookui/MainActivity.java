@@ -44,7 +44,8 @@ public class MainActivity extends FragmentActivity {
 			accountManager = new GoogleAccountManager(this);
 			showDialog();
 		}
-
+		Intent intent = new Intent(this, NotebookListActivity.class);
+		startActivity(intent);
 	}
 
 	void showDialog() {
@@ -101,14 +102,6 @@ public class MainActivity extends FragmentActivity {
 		getMenuInflater().inflate(R.menu.activity_main, menu);
 		return true;
 	}
-
-	/*
-	 * public void signUpPage(View view) { Intent intent = new Intent(this,
-	 * SignUpActivity.class); startActivity(intent); }
-	 * 
-	 * public void profilePage(View view) { Intent intent = new Intent(this,
-	 * Logged_In.class); startActivity(intent); }
-	 */
 
 	private class AccountChooserDialog extends DialogFragment {
 

@@ -10,10 +10,10 @@ public class UserDataSource {
 
 	// Database fields
 	private SQLiteDatabase database;
-	private DictionaryOpenHelper dbHelper;
+	private UserOpenHelper dbHelper;
 
 	public UserDataSource(Context context) {
-		dbHelper = new DictionaryOpenHelper(context);
+		dbHelper = new UserOpenHelper(context);
 	}
 
 	public void open() throws SQLException {
@@ -30,14 +30,14 @@ public class UserDataSource {
 
 	public User createUser(String user_id, String token) {
 		ContentValues values = new ContentValues();
-		values.put(DictionaryOpenHelper.USER_ID, user_id);
-		values.put(DictionaryOpenHelper.TOKEN, token);
-		database.insert(DictionaryOpenHelper.TABLE_USER, null, values);
+		values.put(UserOpenHelper.USER_ID, user_id);
+		values.put(UserOpenHelper.TOKEN, token);
+		database.insert(UserOpenHelper.TABLE_USER, null, values);
 		return getUser();
 	}
 	
 	public User getUser(){
-		Cursor cursor = database.rawQuery("select * from "+DictionaryOpenHelper.TABLE_USER,null);
+		Cursor cursor = database.rawQuery("select * from "+UserOpenHelper.TABLE_USER,null);
 		User user = new User();
 		user.setUserId(cursor.getString(0));
 		user.setToken(cursor.getString(1));

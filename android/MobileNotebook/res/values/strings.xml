@@ -17,7 +17,16 @@
     <string name="text_capture">Capture</string>
     <string name="choose_account_prompt">Choose a Google Account</string>
     <string name="database_name">MobileNotebookDB</string>
-    
+    <string name="no_notebooks">You have no notebooks.</string>
+    <string name="no_todos">Currently there are no Todo items maintained</string>
+    <string name="menu_insert">Add Item</string>
+    <string name="menu_delete">Delete Todo</string>
+    <string name="todo_summary">Summary</string>
+    <string name="todo_description">Delete Todo</string>
+    <string name="todo_edit_summary">Summary</string>
+    <string name="todo_edit_description">Description</string>
+    <string name="todo_edit_confirm">Confirm</string>
+
     <string-array name="classes_arrays">
         <item>CS 172 TTh 4:00-9:00</item>
         <item>CS 198 WF 8:30-12</item>
@@ -29,5 +38,4 @@
         <item>CWTS 2 S 1-4</item>
     </string-array>
 
-    
 </resources>
